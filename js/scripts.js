@@ -3,19 +3,23 @@ $(document).ready(function() {
     event.preventDefault();
 
     var userSentence = $('#userEntry').val();
-    console.log(userSentence);
     
     var userWords = userSentence.split(" ");
-    console.log(userWords[0]);
-    console.log(userWords);
 
-    var userWordLengths = userWords.map(function(userWord){
+    /*var userWordLengths = userWords.map(function(userWord){
       return userWord.length;
+    });*/
+
+    var output = userWords.map(function(userWord){
+      if (userWord.length >= 3){
+        console.log(userWord);
+        return userWord;
+      } else{
+        return "2"
+      }
     });
 
-    console.log(userWordLengths);
-    
-    
+    console.log(output);
     
   });
 });
