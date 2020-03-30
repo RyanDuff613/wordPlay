@@ -15,10 +15,10 @@ $(document).ready(function() {
         console.log(userWord);
         return userWord;
       } else{
-        return "2"
       }
     });
 
+    output.reverse();
     console.log(output);
     
   });
