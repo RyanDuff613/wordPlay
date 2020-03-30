@@ -6,15 +6,15 @@ $(document).ready(function() {
     console.log(userSentence);
     
     var userWords = userSentence.split(" ");
+    console.log(userWords[0]);
     console.log(userWords);
-    
-    var array2 = [];
-    userWords.forEach(function(userWord){
-      return userWord.length();
-      array2.push(userWord);
-    })
 
-    console.log(array2);
+    var userWordLengths = userWords.map(function(userWord){
+      return userWord.length;
+    });
+
+    console.log(userWordLengths);
+    
     
     
   });
