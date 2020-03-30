@@ -1,13 +1,21 @@
 $(document).ready(function() {
   $('#form').submit(function(event){
-    
+    event.preventDefault();
+
     var userSentence = $('#userEntry').val();
     console.log(userSentence);
     
-    var array1 = userSentence.split(" ");
-    console.log(array1);
+    var userWords = userSentence.split(" ");
+    console.log(userWords);
+    
+    var array2 = [];
+    userWords.forEach(function(userWord){
+      return userWord.length();
+      array2.push(userWord);
+    })
+
+    console.log(array2);
     
     
-    event.preventDefault();
   });
 });
